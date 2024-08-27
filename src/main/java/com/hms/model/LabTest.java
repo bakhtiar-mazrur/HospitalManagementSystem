@@ -29,42 +29,42 @@ public class LabTest {
     /**
      * @return the title
      */
-    public String getTitle() {
-        return title;
-    }
-
-    /**
-     * @param title the title to set
-     */
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    /**
-     * @return the cost
-     */
-    public double getCost() {
-        return cost;
-    }
-
-    /**
-     * @param cost the cost to set
-     */
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
-    /**
-     * @return the isAvailable
-     */
-    public boolean isIsAvailable() {
-        return isAvailable;
-    }
-
-    /**
-     * @param isAvailable the isAvailable to set
-     */
-    public void setIsAvailable(boolean isAvailable) {
-        this.isAvailable = isAvailable;
-    }
+//    public String getTitle() {
+//        return title;
+//    }
+//
+//    /**
+//     * @param title the title to set
+//     */
+//    public void setTitle(String title) {
+//        this.title = title;
+//    }
+//
+//    /**
+//     * @return the cost
+//     */
+//    public double getCost() {
+//        return cost;
+//    }
+//
+//    /**
+//     * @param cost the cost to set
+//     */
+//    public void setCost(double cost) {
+//        this.cost = cost;
+//    }
+//
+//    /**
+//     * @return the isAvailable
+//     */
+//    public boolean isIsAvailable() {
+//        return isAvailable;
+//    }
+//
+//    /**
+//     * @param isAvailable the isAvailable to set
+//     */
+//    public void setIsAvailable(boolean isAvailable) {
+//        this.isAvailable = isAvailable;
+//    }
 }

@@ -11,8 +11,8 @@ import com.hms.view.*;
  */
 public class PathologicalTest extends LabTest {
 
-    protected String testType;
-    protected String reagent;
+    private String testType;
+    private String reagent;
     
     public PathologicalTest(String title, String testType, String reagent, double cost, boolean isAvailable) {
         super(title, cost, isAvailable);
@@ -24,40 +24,40 @@ public class PathologicalTest extends LabTest {
 //}
 
     public String returnLabTestInfo() {
-        String output = "Test name: " + this.getTitle() + " "
-                + "Test Type: " + this.getTestType() + " "
-                + "Reagent Name: " + this.getReagent()+" "
-                + "Cost: " + this.getCost() + " "
-                + "Availability: " + this.isIsAvailable();
+        String output = "Test name: " + this.title + " "
+                + "Test Type: " + this.testType + " "
+                + "Reagent Name: " + this.reagent+" "
+                + "Cost: " + this.cost + " "
+                + "Availability: " + this.isAvailable;
         return output;
     }
 
-    /**
-     * @return the testType
-     */
-    public String getTestType() {
-        return testType;
-    }
-
-    /**
-     * @param testType the testType to set
-     */
-    public void setTestType(String testType) {
-        this.testType = testType;
-    }
-
-    /**
-     * @return the reagent
-     */
-    public String getReagent() {
-        return reagent;
-    }
-
-    /**
-     * @param reagent the reagent to set
-     */
-    public void setReagent(String reagent) {
-        this.reagent = reagent;
-    }
+//    /**
+//     * @return the testType
+//     */
+//    public String getTestType() {
+//        return testType;
+//    }
+//
+//    /**
+//     * @param testType the testType to set
+//     */
+//    public void setTestType(String testType) {
+//        this.testType = testType;
+//    }
+//
+//    /**
+//     * @return the reagent
+//     */
+//    public String getReagent() {
+//        return reagent;
+//    }
+//
+//    /**
+//     * @param reagent the reagent to set
+//     */
+//    public void setReagent(String reagent) {
+//        this.reagent = reagent;
+//    }
 
 }

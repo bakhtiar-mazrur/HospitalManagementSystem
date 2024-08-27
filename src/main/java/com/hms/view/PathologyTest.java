@@ -4,6 +4,7 @@
  */
 package com.hms.view;
 import com.hms.model.*;
+import com.hms.controller.SaveData;
 
 /**
  *
@@ -55,6 +56,7 @@ public class PathologyTest extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setPreferredSize(new java.awt.Dimension(1280, 720));
 
         testName.setText("Test Name:");
 
@@ -124,17 +126,17 @@ public class PathologyTest extends javax.swing.JFrame {
                     .addComponent(testInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(testPrice)
-                            .addComponent(testName)
-                            .addComponent(lblTestType)
-                            .addComponent(lblReagent, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(testPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(testName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblTestType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblReagent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(isTestAvailability)
+                            .addComponent(isTestAvailability, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnPathologyDataSubmission)
+                                .addComponent(btnPathologyDataSubmission, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btCancel))
+                                .addComponent(btCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(pathologyTestName, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
                             .addComponent(pathologyTestCost, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
                             .addComponent(drpdnTestType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -186,8 +188,10 @@ public class PathologyTest extends javax.swing.JFrame {
         boolean availability = isTestAvailability.isSelected();
         
         PathologicalTest pTest = new PathologicalTest(testName, testType, reagentName,cost, availability);
+        SaveData resultSaver = new SaveData(pTest.returnLabTestInfo());
         
         testInfo.setText(pTest.returnLabTestInfo());
+//        resultSaver.write(pTest.returnLabTestInfo());
     }//GEN-LAST:event_btnPathologyDataSubmissionActionPerformed
 
     private void pathologyTestNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pathologyTestNameActionPerformed
