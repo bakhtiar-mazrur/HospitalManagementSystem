@@ -10,7 +10,7 @@ package com.hms.model;
  */
 public class RadioLogicalTest extends LabTest{
    
-    protected String plateDimension;
+    private String plateDimension;
     
     public RadioLogicalTest(String title, String plateDimension, double cost, boolean isAvailable) {
         super(title, cost, isAvailable);
@@ -18,26 +18,26 @@ public class RadioLogicalTest extends LabTest{
     }
 
     public String returnLabTestInfo() {
-        String output = "Test name: " + this.getTitle() + " "
-                + "Test Type: " + this.getPlateDimension()+ " "
-                + "Cost: " + this.getCost() + " "
-                + "Availability: " + this.isIsAvailable();
+        String output = "Test name: " + this.title + " "
+                + "Test Type: " + this.plateDimension+ " "
+                + "Cost: " + this.cost + " "
+                + "Availability: " + this.isAvailable;
         return output;
     }
 
     /**
      * @return the plateDimension
      */
-    public String getPlateDimension() {
-        return plateDimension;
-    }
-
-    /**
-     * @param plateDimension the plateDimension to set
-     */
-    public void setPlateDimension(String plateDimension) {
-        this.plateDimension = plateDimension;
-    }
+//    public String getPlateDimension() {
+//        return plateDimension;
+//    }
+//
+//    /**
+//     * @param plateDimension the plateDimension to set
+//     */
+//    public void setPlateDimension(String plateDimension) {
+//        this.plateDimension = plateDimension;
+//    }
 
 }
 
